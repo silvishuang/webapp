@@ -1,0 +1,18 @@
+<div class="home_list" ng-repeat="(key,value) in homeData.posts" ui-sref="home.detail" ng-click="detail(key)">
+    <p class="tag" ng-bind="value.column.name" ng-if="value.column.name">tag</p>
+    <h3 ng-bind="value.title">标题</h3>
+    <div class="post1" ng-if="value.display_style == 10001">
+        <p ng-bind="value.abstract">内容</p>
+    </div>
+    <div class="post2" ng-if="value.display_style == 10002">
+        <img src="images/home/post_1.png" alt="">
+        <p ng-bind="value.abstract">内容</p>
+    </div>
+    <div class="post3" ng-if="value.display_style == 10003">
+        <ul>
+            <li><img src="images/home/post_3.png" alt=""></li>
+            <li><img src="images/home/post_4.png" alt=""></li>
+            <li><img src="images/home/post_5.png" alt=""></li>
+        </ul>
+    </div>
+</div>
